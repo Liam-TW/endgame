@@ -9,12 +9,20 @@
             font-family: Arial, sans-serif;
             text-align: center;
             background-image: url("images/背景.jpg");
-            background-size: cover;
+            background-size: contain; /* 使用 contain 讓背景圖片完全顯示 */
             background-repeat: no-repeat;
             background-position: center center;
+            background-attachment: fixed; /* 固定背景，不隨滾動移動 */
             color: #fff;
             margin: 0;
         }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-size: cover; /* 小螢幕時恢復 cover 適應全螢幕 */
+            }
+        }
+            
         h1 { margin: 20px 0; }
         button {
             margin: 10px;
