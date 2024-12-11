@@ -31,18 +31,19 @@
             cursor: pointer;
         }
         .container { display: flex; justify-content: center; margin: 20px; }
-        .dr { 
-            margin: 20px; 
-            text-align: center; 
-            color: #f4f4f4; 
+        .dr {
+            margin: 20px auto; /* 水平置中 */
+            text-align: center;
+            color: #f4f4f4;
+            max-width: 100%; /* 確保父容器不超出寬度 */
+            overflow: hidden; /* 避免內容超出 */
         }
-
-        .dr img { 
-            max-width: 100%; /* 確保圖片不會超過容器的寬度 */
-            height: auto;   /* 保持圖片比例 */
-            display: block; /* 將圖片設為區塊元素，防止間距問題 */
-            margin: 0 auto; /* 水平置中 */
-            box-sizing: border-box; /* 邊界和內邊距計入元素總大小 */
+        
+        .dr img {
+            max-width: 100%; /* 圖片寬度限制在父容器內 */
+            height: auto;    /* 等比例縮放 */
+            display: block;  /* 防止多餘空間 */
+            margin: 0 auto;  /* 水平置中 */
         }
         .monster {
             width: 200px; height: 200px; object-fit: contain;
